@@ -3,17 +3,14 @@
   <h1 class="display-4">
     <%= @contact.first_name %> <%= @contact.last_name %>
   </h1>
-  <p class="lead">Email: <%= @contact.email %></p>
-  <p class="lead">Phone: <%= @contact.phone %></p>
-  <p class="lead">Twitter: <%= @contact.twitter %></p>
+  <p ><strong>Email: </strong><%= @contact.email %></p>
+  <p ><strong>Phone: </strong><%= @contact.phone %></p>
+  <p><strong>Twitter: </strong><%= @contact.twitter %></p>
 
-  <p class="lead">Website: <%= @contact.website %></p>
+  <p><strong>Website: </strong><%= link_to @contact.website, "http://#{@contact.website}", target: "_blank" %></p>
+  <p><strong>Address: </strong><%= @contact.street %>, <%= @contact.city %>, <%= @contact.state %> <%= @contact.zip_code %></p>
   <br>
-  <h2>Address</h2>
-  <p class="lead">Street: <%= @contact.street %></p>
-  <p class="lead">City: <%= @contact.city %></p>
-  <p class="lead">State: <%= @contact.state %></p>
-  <p class="lead">Zip Code: <%= @contact.zip_code %></p>
+
 
   <hr class="my-4">
   <p class="lead">
